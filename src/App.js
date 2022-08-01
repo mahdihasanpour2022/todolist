@@ -1,11 +1,14 @@
 import React from 'react';
 import Todos from "./components/todos/Todos";
+import Store from './redux/Store';
+import {Provider} from "react-redux";
+
 
 const App = () => {
     return (
-        <div>
+        <Provider store={Store}>
             <Todos />
-        </div>
+        </Provider>
     );
 };
 
