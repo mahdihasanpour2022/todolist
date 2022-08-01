@@ -1,0 +1,27 @@
+@import "../../styles/common_styles/variables";
+@import "../../styles//common_styles/mixins";
+
+.navbar {
+  padding-top: 0rem;
+  background-color: $blueColor;
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .navbar_item {
+    width: 50px;
+    height: 50px;
+    @include flex(center, center);
+
+    .navLink {
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $whiteColor;
+      }
+    }
+    
+  }
+}

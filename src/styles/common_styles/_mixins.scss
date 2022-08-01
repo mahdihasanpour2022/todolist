@@ -1,0 +1,8 @@
+@import "../common_styles/variables";
+
+@mixin flex($js , $al){
+    display: flex;
+    justify-content: $js;
+    align-items: $al;
+    @content;
+};
