@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  // border-radius: 0 10px 10px 0;
 
   .navbar_item {
     width: 50px;
@@ -17,11 +18,20 @@
 
     .navLink {
       svg {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.4rem;
+        height: 1.4rem;
         color: $whiteColor;
+        // transition: all 0.3s ease;
       }
     }
-    
+    .active {
+      svg {
+        color: $lightGray;
+      }
+    }
+    &:hover {
+      translate: scale(2) !important;
+      background-color: $darkBlue;
+    }
   }
 }

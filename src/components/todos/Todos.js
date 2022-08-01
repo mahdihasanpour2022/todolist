@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import  {fetchData}  from "../../redux/todos/todosActionCreators";
 // scss 
-// import Styles from "./todos.module.scss";
+import Styles from "./todos.module.scss";
 // component 
 import Todo from "../todo/Todo";
 
@@ -20,7 +20,12 @@ const Todos = () => {
     <>
         {!!loading ? <p>loading ... </p> :
         !!error ? <p>{error}</p> : 
-        !!todos.length && todos.map((item)=> <Todo key={item.id} data={item} />)}
+        !!todos.length && 
+        <div className={`${Styles.todos} container-fluid`}>
+        <div className="row">
+        { todos.map((item)=> <Todo key={item.id} data={item} />)}
+        </div>
+        </div> }
     </>
   );
 };
