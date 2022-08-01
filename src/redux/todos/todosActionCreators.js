@@ -15,7 +15,6 @@ const errors_todos =message=>{
             dispatch(loading_todos(true));
 
             const res = await get_todos_data();
-            
             dispatch(loading_todos(false));
             dispatch(get_todos(res.data));
             dispatch(errors_todos(""));

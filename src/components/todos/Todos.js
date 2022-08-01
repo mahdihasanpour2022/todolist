@@ -6,16 +6,19 @@ import  {fetchData}  from "../../redux/todos/todosActionCreators";
 const Todos = () => {
 
   const dispatch =useDispatch();
-  const { todos ,loading} = useSelector(state => state.todosState);
+  const { loading , todos , error } = useSelector(state => state.todosState);
 
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
 
+
   return (
-    <div>
-        here is todos
-    </div>
+    <>
+        {!!loading ? <p>loading ... </p> :
+        !!error ? <p>{error}</p> : 
+        !!todos.length && todos.map((item)=> <p>{item.title}</p>)}
+    </>
   );
 };
 
