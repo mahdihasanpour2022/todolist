@@ -13,6 +13,7 @@ const Navbar = () => {
       <div className={Styles.navbar_item}>
         <NavLink
           to="/"
+          title="home"
           className={(NavData) =>
             NavData.isActive
               ? `${Styles.navLink} ${Styles.active}`
@@ -25,6 +26,7 @@ const Navbar = () => {
       <div className={Styles.navbar_item}>
         <NavLink
           to="/todosrouter"
+          title="todos"
           className={(NavData) =>
             NavData.isActive
               ? `${Styles.navLink} ${Styles.active}`

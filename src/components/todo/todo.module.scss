@@ -1,7 +1,28 @@
 @import "../../styles/common_styles/variables";
-@import "../../styles//common_styles/mixins";
-
+@import "../../styles/common_styles/mixins";
+@import "../../styles/common_styles/fonts";
 
 .todo {
-    color:$whiteColor;
+  @include flex( space-between , center);
+  width: 100%;
+  // background-color: $new_light_gray;
+  color: $whiteColor;
+  p{
+    margin-bottom: 0;
+    padding: 0.7rem;
+    font-family: $HandoSoftTrial_Regular;
+  }
+  .iconDiv{
+    svg{
+      color: $lightGreen;
+      // color: $darkGreen;
+      font-size: 1.2rem;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+.uncompleted{
+  background-color: $new_dark_gray;
+border-left: 1px solid $whiteColor;
 }
